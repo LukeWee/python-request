@@ -11,5 +11,8 @@ for count in range(0,9):
     print (r.headers['content-type'])
     print (r.encoding)
     print (r.text)
-    print (r.json())
-
+    try:
+        print (r.json())
+        
+    except ValueError:
+        print r
